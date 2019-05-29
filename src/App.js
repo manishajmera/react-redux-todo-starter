@@ -10,26 +10,27 @@ export default class App extends React.Component {
     }
     render () {
         return (
-            <div>
-                {this.state.string && <div class="sentence" dangerouslySetInnerHTML={{__html:this.state.string}}/>}
-                {!this.state.string && <div>
-                    <h1 className="heading">MarkDownScreen</h1>
-                    <div>
-                        <span>Instructions</span>
-                        <ul>
-                            <li>*This makes the text bold*</li>
-                            <li>_This underlines the text_</li>
-                            <li>^This increases the font size^</li>
-                            <li>[To make a link]</li>
+            <div >
+                <h1 className="heading">MarkDownScreen</h1>
+                <div className="sentence">
+                    <span>Instructions</span>
+                    <ul>
+                        <li>*This makes the text bold*</li>
+                        <li>_This underlines the text_</li>
+                        <li>^This increases the font size^</li>
+                        <li>[To make a link]</li>
 
-                        </ul>
-                    </div>
-                    <form onSubmit={this.onSubmit.bind(this)} className="create-todo-form">
-                        <textarea  placeholder="Enter Your sentence here" ref="taskMessage" autoFocus/>
-                        <button className="primaryButton">Add</button>
-                    </form>
+                    </ul>
                 </div>
-                }
+                <form onSubmit={this.onSubmit.bind(this)} className="sentence">
+                    <textarea  placeholder="Enter your sentence here" ref="taskMessage" autoFocus/>
+                    <div className="buttonCls"><button className="primaryButton">Post</button></div>
+                </form> 
+                {this.state.string && <div class="sentence">
+                    <p><b>Your entered sentence is:-</b></p>
+                    <span  dangerouslySetInnerHTML={{__html:this.state.string}}/>
+                    </div>
+                    }
             </div>
         );
     }

@@ -3,23 +3,34 @@ textarea {
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
+  height: 140px;
   border: none;
-  border-bottom: 2px solid red;
+  border: 2px solid #a99e9e;
 }
 .heading {
   text-align: center;
 }
 
 .primaryButton {
-    margin-left: 45%;
-    height: 30px;
-    width: 100px;
-    background-color: blue;
-    border: black;
-    border-style: hidden;
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
 .sentence {
-  margin-top:8%;
-  margin-left:10%;
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 12%;
 }
+
+.buttonCls {
+  text-align: center;
+}
+
